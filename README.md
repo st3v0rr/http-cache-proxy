@@ -1,2 +1,2 @@
 # http-cache-proxy
-Simple http-cache-proxy
+Simple express based http-cache-proxy

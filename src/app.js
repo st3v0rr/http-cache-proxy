@@ -15,9 +15,11 @@ app.use(expressHttpProxy(process.env.PROXYHOST));
 // start express server
 const APP_PORT = process.env.PORT || 8080;
 app.listen(APP_PORT, () => {
-  console.log(`External CORS cache server started at port ${APP_PORT}`);
+  console.log(`cache server started at port ${APP_PORT}`);
+  console.log(`proxy to host ${process.env.PROXYHOST}`);
 });
 
+// create cache middleware
 function cacheMiddleware() {
   const cacheOptions = {
     debug: true,
