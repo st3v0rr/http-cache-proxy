@@ -6,7 +6,7 @@ node {
     }
 
     stage('Build image') {
-        app = docker.build("st3v0rr/http-cache-proxy")
+        app = docker.build("st3v0rr/http-cache-proxy", "--no-cache --pull .")
     }
 
     stage('Push image') {
